@@ -1,10 +1,7 @@
 package com.likelion.mini2team.domain.diary;
 
 import com.likelion.mini2team.domain.user.User;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,6 +21,7 @@ public class Diary {
     private String content;
     private String location;
 
+    @ManyToOne
     private User owner;
 
     private LocalDateTime diaryTime;
