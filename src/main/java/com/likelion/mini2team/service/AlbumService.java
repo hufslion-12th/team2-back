@@ -22,8 +22,9 @@ public class AlbumService {
     }
 
     /* 앨범 조회*/
-    public List<Album> getAllAlbums() {
-        return albumRepository.findAll();
+    public List<Album> getAlbumsByUserId(Long userId) {
+        // 사용자 ID를 기반으로 해당 사용자의 앨범을 조회
+        return albumRepository.findByOwnerId(userId);
     }
 
     /* 앨범 삭제 */
