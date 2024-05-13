@@ -7,6 +7,17 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.likelion.mini2team.domain.user.User;
+import com.likelion.mini2team.domain.diary.Diary;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
+
+
+
+
+
+import java.util.List;
+
 
 @Entity
 @Setter
@@ -19,4 +30,12 @@ public class Album {
 
     private String name; /*앨범이름 엔티티 정의*/
 
+    @OneToOne
+    private User owner;
+
+    @OneToMany(mappedBy = "album")
+    private List<Album> myAlbums;
+
+    @OneToMany(mappedBy = "album")
+    private List<Diary> myDiaries;
 }

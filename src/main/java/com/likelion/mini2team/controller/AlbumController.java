@@ -20,8 +20,8 @@ public class AlbumController {
     }
 
     @GetMapping
-    public List<Album> getAllAlbums() {
-        return albumService.getAllAlbums();
+    public List<Album> getAllAlbums(@PathVariable Long userId) {
+        return albumService.getAlbumsByUserId(userId);
     }
 
     @DeleteMapping("/{id}")
