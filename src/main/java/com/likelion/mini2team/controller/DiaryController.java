@@ -4,10 +4,7 @@ import com.likelion.mini2team.domain.diary.DiaryCreateRequest;
 import com.likelion.mini2team.domain.diary.DiaryCreateResponse;
 import com.likelion.mini2team.service.DiaryService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/diaries")
@@ -19,5 +16,13 @@ public class DiaryController {
     @PostMapping
     public DiaryCreateResponse createDiary(@RequestBody DiaryCreateRequest diaryCreateRequest){
         return diaryService.createDiary(diaryCreateRequest);
+    }
+
+    @GetMapping("/diaries/delete")
+    public String diaryDelete(Integer id) {
+
+        diaryService.diaryDelete(id);
+
+        return "redirect:/diaries";
     }
 }

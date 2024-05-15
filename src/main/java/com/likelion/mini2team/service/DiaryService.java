@@ -35,4 +35,8 @@ public class DiaryService {
 
         return new DiaryCreateResponse(savedDiary.getId(), savedDiary.getTitle());
     }
+
+    public void diaryDelete(Integer id){
+        diaryRepository.deleteById(id);
+    }
 }
