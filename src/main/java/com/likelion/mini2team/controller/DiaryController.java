@@ -18,11 +18,12 @@ public class DiaryController {
         return diaryService.createDiary(diaryCreateRequest);
     }
 
-    @GetMapping("/diaries/delete")
-    public String diaryDelete(Integer id) {
-
-        diaryService.diaryDelete(id);
-
-        return "redirect:/diaries";
-    }
+    // 구현되지 않은 Service 이므로 삭제하였음
+//    @GetMapping("/diaries/delete")
+//    public String diaryDelete(Integer id) {
+//
+//        diaryService.diaryDelete(id);
+//
+//        return "redirect:/diaries";
+//    }
 }

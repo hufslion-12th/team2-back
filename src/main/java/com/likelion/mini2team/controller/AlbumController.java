@@ -19,11 +19,6 @@ public class AlbumController {
         return albumService.addAlbum(name);
     }
 
-    @GetMapping
-    public List<Album> getAllAlbums(@PathVariable Long userId) {
-        return albumService.getAlbumsByUserId(userId);
-    }
-
     @DeleteMapping("/{id}")
     public void deleteAlbum(@PathVariable Long id) {
         albumService.deleteAlbum(id);

@@ -1,23 +1,14 @@
 package com.likelion.mini2team.domain.album;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.likelion.mini2team.domain.diary.Diary;
+import com.likelion.mini2team.domain.user.User;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import com.likelion.mini2team.domain.user.User;
-import com.likelion.mini2team.domain.diary.Diary;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.OneToMany;
 
-
-
-
-
+import java.time.LocalDateTime;
 import java.util.List;
-
 
 @Entity
 @Setter
@@ -28,14 +19,16 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name; /*앨범이름 엔티티 정의*/
+    private String name; /* 앨범 이름 */
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private User owner;
 
-    @OneToMany(mappedBy = "album")
-    private List<Album> myAlbums;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Album> subAlbums;
 
-    @OneToMany(mappedBy = "album")
-    private List<Diary> myDiaries;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Diary> diaries;
+
+    private LocalDateTime createdAt = LocalDateTime.now();
 }

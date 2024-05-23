@@ -21,10 +21,12 @@ public class Diary {
     private String content;
     private String location;
 
-    @ManyToOne
+    private String image;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private User owner;
 
     private LocalDateTime diaryTime;
-
+    private LocalDateTime createdAt = LocalDateTime.now();
 
 }

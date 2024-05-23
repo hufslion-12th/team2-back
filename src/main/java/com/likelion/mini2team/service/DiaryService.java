@@ -14,11 +14,13 @@ import java.time.LocalDateTime;
 @Service
 public class DiaryService {
 
-    @Autowired
-    private DiaryRepository diaryRepository;
+    private final DiaryRepository diaryRepository;
+    private final UserRepository userRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    public DiaryService(DiaryRepository diaryRepository, UserRepository userRepository) {
+        this.diaryRepository = diaryRepository;
+        this.userRepository = userRepository;
+    }
 
     public DiaryCreateResponse createDiary(DiaryCreateRequest dto) {
         Diary newDiary = new Diary();
@@ -36,7 +38,5 @@ public class DiaryService {
         return new DiaryCreateResponse(savedDiary.getId(), savedDiary.getTitle());
     }
 
-    public void diaryDelete(Integer id){
-        diaryRepository.deleteById(id);
-    }
+
 }
