@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db.klr.kr:3306/mini2team?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: mini2team
+    password: mini
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.format_sql: true
+      dialect: org.hibernate.dialect.MySQL8InnoDBDialect

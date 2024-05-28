@@ -20,6 +20,8 @@ public class User {
     private String password;
     private String nickname;
 
+    private String refreshToken;
+
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Album rootAlbum;
 
