@@ -30,7 +30,7 @@ public class ProxyController {
     @Autowired
     private ProxyServiceForLife4Cut proxyServiceForLife4Cut;
 
-    @GetMapping("/fetch-media")
+    @GetMapping("/4cutimage")
     public ResponseEntity<byte[]> fetchMedia(@RequestParam String url) throws IOException, URISyntaxException {
         return proxyServiceForLife4Cut.fetchMedia(url, true);
     }

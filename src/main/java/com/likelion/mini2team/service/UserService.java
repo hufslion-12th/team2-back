@@ -1,32 +1,21 @@
 package com.likelion.mini2team.service;
 
 import com.likelion.mini2team.domain.album.Album;
+import com.likelion.mini2team.domain.auth.UserJoinRequest;
 import com.likelion.mini2team.domain.user.User;
-import com.likelion.mini2team.domain.user.UserCreateRequest;
 import com.likelion.mini2team.domain.user.UserInfoResponse;
+import com.likelion.mini2team.domain.auth.UserLoginRequest;
 import com.likelion.mini2team.repository.UserRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    public long createUser(UserCreateRequest dto){
-        User newUser = new User();
-        newUser.setUserId(dto.getUserId());
-        newUser.setPassword(dto.getPassword());
-        newUser.setNickname(dto.getNickname() != null ?
-                dto.getNickname() : dto.getUserId());
-
-        Album album = new Album();
-        album.setName(dto.getNickname());
-        album.setOwner(newUser);
-
-
-        userRepository.save(newUser);
-        return newUser.getId();
-    }
 
     public UserInfoResponse getUser(long id){
         User selectedUser = userRepository.findById(id)
