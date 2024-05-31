@@ -6,6 +6,10 @@
 - 서비스 내 QR 코드 인식 지원
 - 일기장 공유 지원
 
+## 수상
+**HUFS Global 멋쟁이사자처럼 12기 미니프로젝트 경진대회 2등 수상**
+![image](https://github.com/hufslion-12th/team2-back/assets/74558236/a0619031-6578-4d38-b142-fb350843bf42)
+
 ## 인프라
 ![image](https://github.com/hufslion-12th/team2-back/assets/74558236/0e8344a8-5ba4-4179-a1f9-1a229dc12c17)
 
