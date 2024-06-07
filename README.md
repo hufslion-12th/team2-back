@@ -24,7 +24,7 @@
 |   [@leestana01](https://github.com/leestana01)   |  [@wayne4918](https://github.com/wayne4918)     |   [@sunmin416](https://github.com/sunmin416)   |
 
 ### 🛠️ Tech 🛠
-<img src="https://skillicons.dev/icons?i=react,styledcomponents,docker,nginx,aws" alt=""/>
+<img src="https://skillicons.dev/icons?i=react,styledcomponents,spring,mysql,docker,nginx,aws,jenkins" alt=""/>
 <br>
 </div>
 
