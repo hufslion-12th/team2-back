@@ -20,7 +20,7 @@
 |  <img style="width: 200px;" src="https://github.com/hufslion-12th/team2-back/assets/74558236/c652ae5d-c877-4e81-b2ca-105694967dba" />  | <img style="width: 200px;" src="https://github.com/hufslion-12th/team2-back/assets/74558236/510f5859-809f-4d98-9e80-addedf8eebea" /> | <img style="width: 200px;" src="https://github.com/hufslion-12th/team2-back/assets/74558236/cefb7a79-2dd6-458b-ab29-24d0b7ebeef2" /> |
 |한국외국어대학교|한국외국어대학교|한국외국어대학교|
 |정보통신공학과 20|통계학과 20|글로벌자유전공학부 24|
-|이수혁|류동현|고선|
+|이수혁|류동현|고선민|
 |   [@leestana01](https://github.com/leestana01)   |  [@wayne4918](https://github.com/wayne4918)     |   [@sunmin416](https://github.com/sunmin416)   |
 
 ### 🛠️ Tech 🛠
